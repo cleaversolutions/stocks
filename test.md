@@ -1,6 +1,7 @@
 ---
 layout: none
 time-horizon: 36
+portfolio-value: 1  
 ---
 <html>
 <head>
@@ -49,19 +50,20 @@ var year = yearArray[startMonth];
 console.log(length);
 console.log(startMonth);
 console.log(endMonth);
-const portfolioValue = [100];
-const portfolioValueA = [100];
-const portfolioValueB = [100];
-const portfolioValueC = [100];
-const portfolioValueD = [100];
-const portfolioValueE = [100];
-const portfolioValueF = [100];
-const portfolioValueG = [100];
-const portfolioValueH = [100];
-const portfolioValueI = [100];
-const portfolioValueJ = [100];
+const portfolioValue = [{{ page.portfolio-value }}];
+const portfolioValueA = [{{ page.portfolio-value }}];
+const portfolioValueB = [{{ page.portfolio-value }}];
+const portfolioValueC = [{{ page.portfolio-value }}];
+const portfolioValueD = [{{ page.portfolio-value }}];
+const portfolioValueE = [{{ page.portfolio-value }}];
+const portfolioValueF = [{{ page.portfolio-value }}];
+const portfolioValueG = [{{ page.portfolio-value }}];
+const portfolioValueH = [{{ page.portfolio-value }}];
+const portfolioValueI = [{{ page.portfolio-value }}];
+const portfolioValueJ = [{{ page.portfolio-value }}];
 var randomNumbers = [];
 var timeHorizon = {{ page.time-horizon }};
+var caption = "{{ page.time-horizon }} Month Stock Market Returns Starting in " + month + "-" + year;
 
 
 function market(){
@@ -75,7 +77,7 @@ function market(){
   }
 
   var text = "";
-  value = 100;
+  value = {{ page.portfolio-value }} ;
   var i;
   var p = 1;
   for (i = startMonth; i < endMonth; i++) {
@@ -192,9 +194,11 @@ function market(){
       dataSource: {
         "chart": {
           "theme": "fusion",
-          "caption": "36 Month Stock Market Returns Starting in",
+          "caption": caption,
           "subCaption": "Bakersfield Central vs Los Angeles Topanga",
-          "xAxisName": "Month"
+          "xAxisName": "Month",
+          "lineThickness": "1",
+          "anchorAlpha": "0"
         },
         "categories": [{
           "category": [
@@ -213,7 +217,9 @@ function market(){
 
             {% for counter in (0..page.time-horizon) %}
             {
-                "value": portfolioValue[{{ counter }}]
+                "value": portfolioValue[{{ counter }}],
+                "dashed": "5",
+                "color": "#000000"
             },
 
             {% endfor %}
