@@ -195,7 +195,7 @@ function market(){
         "chart": {
           "theme": "fusion",
           "caption": caption,
-          "subCaption": "Bakersfield Central vs Los Angeles Topanga",
+          "subCaption": "Using Random Portfolio Positions vs. the Market",
           "xAxisName": "Month",
           "lineThickness": "1",
           "anchorAlpha": "0"
