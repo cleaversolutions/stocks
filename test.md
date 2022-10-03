@@ -67,7 +67,7 @@ var caption = "{{ page.time-horizon }} Month Stock Market Returns Starting in " 
 
 
 function market(){
-  document.getElementById("title").innerHTML = startMonth + " Year: " + year + " Month: " + month;
+  //document.getElementById("title").innerHTML = startMonth + " Year: " + year + " Month: " + month;
 
 
   var counter;
