@@ -1,7 +1,9 @@
----
-layout: page
+NOTE: missing third dash in frontmatter to process.
+
+--
+layout: page-2
 title: About
-permalink: /about/
+permalink: /about-2/
 ---
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
@@ -16,3 +18,10 @@ You can find the source code for Jekyll at GitHub:
 
 
 [jekyll-organization]: https://github.com/jekyll
+
+{% include stock-script.html %}
+
+<div id="chart-container2">The chart is loading. If the chart does not load, you probably have javascript disabled.</div>
+
+
+
