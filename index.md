@@ -3,8 +3,6 @@ layout: page
 time-horizon: 36
 portfolio-value: 10000  
 ---
-{% include stock-script.html %}
-
 <div id="chart-container2">The chart is loading. If the chart does not load, you probably have javascript disabled. Try refreshing the page.</div>
 
 ## Chart Explanation
